@@ -33,6 +33,7 @@
 
   <p>Configurações do meu computador pessoal utilizado neste projeto:</p>
 
+  <p><strong>Sistema Operacional:</strong> Windows 10 Pro - 32 bits</p>
   <p><strong>Processador:</strong> Intel(R) Core(TM) i7 CPU M620 @ 2,67GHz 2,67GHz</p>
   <p><strong>Memória:</strong> 6,00 GB </p>
   <p><strong>HD:</strong> HD SATA II 500 GB</p>
@@ -45,8 +46,9 @@
   <p><strong>Notepad++:</strong> Utilizado para geração e edição dos arquivos ".html", ".txt", ".md";</p>
   <p><strong>Microsoft Project:</strong> Utilizado para geração e edição do cronograma do projeto;</p>
   <p><strong>Microsoft SQL Server:</strong> Utilizado para gestão dos bancos de dados;</p>
-  <p><strong>Microsoft SQL Server Integration Service</strong> Utilizado para tarefas de ETL (Extract, Transform, Load) dos dados;</p>
-  <p><strong>Microsoft PowerBI</strong> Utilizado para criação do dashboard interativo;</p>
+  <p><strong>Microsoft SQL Server Integration Service:</strong> Utilizado para tarefas de ETL (Extract, Transform, Load) dos dados;</p>
+  <p><strong>Microsoft PowerBI:</strong> Utilizado para criação do dashboard interativo.</p>
+  <p><strong>Plataforma Prezi:</strong> Utilizado para criação da apresentação do projeto para turma em sala de aula.</p>
 
 ## Leia o passo a passo na integra... ##
 
