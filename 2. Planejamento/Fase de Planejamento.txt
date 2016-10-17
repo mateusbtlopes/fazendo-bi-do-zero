@@ -1,0 +1,14 @@
+Fase de Planejamento:
+? Escopo do Projeto (entregáveis e o que não será feito)
+? Premissas
+? Riscos
+? Restrições
+? EAP
+? Cronograma das Atividades
+(definir duração, prazo, recursos e o sequenciamento das tarefas)
+? Definir o Organograma do Projeto
+? Definir o Plano de Orçamento e Custos do Projeto
+? Definir o Plano de Comunicação
+? Definir o Plano de Gerenciamento de Riscos
+? Definir o Plano de Aquisições do Projeto
+? Definir o Termo de Aceite da Entrega final do Projeto
