@@ -5,6 +5,7 @@
 | Versão  | Data | Autor  | Descrição | Aprovador |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | 1.0.0  | 30/09/2016  | Mateus Bruno T. Lopes  | Versão inicial  | Prof. Rodrigo Vitorino Moravia |
+| 2.0.0  | 17/10/2016  | Mateus Bruno T. Lopes  | Correção do Plano de Projeto | Prof. Rodrigo Vitorino Moravia |
 
 ### Objetivos do Projeto ###
 
@@ -42,7 +43,7 @@
 
 ### Escopo do Projeto ###
 
-Dentro do Escopo (entregáveis):
+#### Dentro do Escopo (entregáveis): ####
 * Criação do banco de dados (Data Mart)
 * Tratamento da qualidade dos dados
 * Documentação do projeto
@@ -52,7 +53,7 @@ Dentro do Escopo (entregáveis):
 * Disponibilização dos dashboards para os demais alunos e o professor
 * Apresentação do trabalho
 
-### Fora do Escopo ###
+#### Fora do Escopo ####
 <p>Disponibilização de licenças dos softwares utilizados neste trabalho</p>
 
 ### Premissas ###
@@ -63,38 +64,3 @@ Dentro do Escopo (entregáveis):
 
 ### Restrições ###
 <p>Restrição de acesso a qualquer tipo de ferramenta necessária para desenvolvimento deste trabalho</p>
-
-### EAP Estrutura Analítica do Projeto ###
-
-<p>Definição da EAP (WBS)</p>
-
-### Cronograma do Projeto ###
-
-<p>Incluir imagem - Cronograma do Projeto.png</p>
-
-### Organograma do Projeto ###
-
-![Organograma do Projeto](https://github.com/mateusblopes/fazendo-bi-do-zero/blob/master/2.%20Planejamento/Organograma%20do%20Projeto.png)
-
-### Orçamento e Custos do Projeto ###
-
-<p>Não se aplica.</p>
-
-### Comunicação do Projeto ###
-
-<p>Definir a matriz de Comunicação do projeto.</p>
-
-### Mapa de Comunicação do Projeto ### 
-
-| Nome da tarefa  | Documento | Emissor | Receptor | Mídia | Periodicidade |
-| ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
-| Plano do Projeto | Plano | Aluno | Stakeholders | E-mail | Ao terminar |
-| Apresentação final | Prezi | Aluno | Stakeholders | E-mail | Ao terminar |
-
-### Gerenciamento de Riscos ###
-
-<p>Dificuldade/Restrição de acesso aos dados disponibilizados no site do TRE</p>
-
-<p>Nível/Probabilidade de ocorrer: Baixa</br>
-Impacto: Médio</br>
-Ação: Acessar e fazer download de todos os arquivos disponíveis e necessários o quanto antes, bem como salvar em local seguro e confiavel.</p>
