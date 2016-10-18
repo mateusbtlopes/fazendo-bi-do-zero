@@ -7,6 +7,6 @@
 
 ### Requisitos Não-Funcionais ###
 
-* Filtros que permitam
+* Filtros que permitam melhor entendimento dos dados
 * Facilidade de leitura dos dados
 * Variações de cores
