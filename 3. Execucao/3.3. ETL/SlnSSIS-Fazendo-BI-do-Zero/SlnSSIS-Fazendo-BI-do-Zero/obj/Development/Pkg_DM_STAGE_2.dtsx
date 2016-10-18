@@ -1,0 +1,2253 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="10/18/2016 1:46:43 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="CPX-9T8AP5E00YJ"
+  DTS:CreatorName="DIR\mateus.lopes"
+  DTS:DTSID="{9B9446FA-999F-4DFE-AEA3-5726862D12CE}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="12.0.2430.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Pkg_DM_STAGE_2"
+  DTS:PackageType="5"
+  DTS:VersionBuild="15"
+  DTS:VersionGUID="{9734928F-A2CE-47DD-B595-648C432029F9}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[TXT_Source_Votacao_Candidatos]"
+      DTS:CreationName="FLATFILE"
+      DTS:Description="TXT_Source_Votacao_Candidatos"
+      DTS:DTSID="{377E198F-1661-47A8-80AA-0265C41371C9}"
+      DTS:ObjectName="TXT_Source_Votacao_Candidatos">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::CurrentPath]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x003B_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x0022_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="0">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 0"
+              DTS:DTSID="{F8200262-27F1-49C9-80B6-594833093578}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 1"
+              DTS:DTSID="{E57063A7-6023-41C2-9899-8235F24A4D2C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 2"
+              DTS:DTSID="{1214F3CC-D2FB-4E64-A2CE-8ED71466130B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 3"
+              DTS:DTSID="{35824492-C1B3-441A-8931-58F05F73C156}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 4"
+              DTS:DTSID="{BC8391FE-9EEA-4F6B-931E-A185A633285A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 5"
+              DTS:DTSID="{E2F28611-6626-4BE1-90DF-0BEA35E4626F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 6"
+              DTS:DTSID="{7EF48546-04B1-4B0E-BD9C-A4042F3A759B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 7"
+              DTS:DTSID="{099754FE-8CC1-474D-9A69-4205E780BC2F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 8"
+              DTS:DTSID="{CC4FEDF2-426A-4A66-815A-332B7177F6F1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 9"
+              DTS:DTSID="{1DEE88AA-7913-4D86-AE82-A179A2734FA4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 10"
+              DTS:DTSID="{3FD4E5A4-7C58-4A34-AFD2-C01548E418AE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 11"
+              DTS:DTSID="{53DD8D74-46E1-4FDE-9AC1-4EF1ECBA6AA5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 12"
+              DTS:DTSID="{6DC655BA-D92F-4A29-BB06-C65BC4B7FB44}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 13"
+              DTS:DTSID="{5C74AEFD-CB08-4D8E-8A7D-5D6202E48BFB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 14"
+              DTS:DTSID="{0DD3AA60-5723-43EF-8802-0E3D71D3ED21}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 15"
+              DTS:DTSID="{C60A49E2-FE82-4827-B509-5CA1447477FF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 16"
+              DTS:DTSID="{5416648A-5383-4235-ABBB-8B426624AD01}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 17"
+              DTS:DTSID="{DAF216CD-5366-492A-AB40-BA85363CC147}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 18"
+              DTS:DTSID="{50C62760-DC25-4867-8C08-E9179D134A7E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 19"
+              DTS:DTSID="{81A8BA0D-C682-4036-8B26-D54692070E52}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 20"
+              DTS:DTSID="{83D57107-E5BE-4CDB-8EB6-FF3D43F080BC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 21"
+              DTS:DTSID="{FEED38F9-0B6A-4646-B230-BFE56B16349D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 22"
+              DTS:DTSID="{2FDE6E02-DA30-4C20-937B-A2ADCC7E45FD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 23"
+              DTS:DTSID="{B78ECAEE-5D74-4F7D-A496-DE62391673AF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 24"
+              DTS:DTSID="{604409AA-C135-44AE-B81C-98FE9C456144}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 25"
+              DTS:DTSID="{840F18AE-EC81-43F8-91F5-9A61DC37BD82}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 26"
+              DTS:DTSID="{CB82996C-A11B-464E-BFD6-A2C45353E438}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 27"
+              DTS:DTSID="{304E3702-5FB2-447A-8951-1116F397601E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 28"
+              DTS:DTSID="{AD99AFAE-6C45-4E26-9A57-BC632451F36C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 29"
+              DTS:DTSID="{802D1E3B-3778-4CCC-AC9C-385FBFD9BF44}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{4A6FE531-5253-4F38-B871-3A0DDB83AF33}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="CurrentPath">
+      <DTS:VariableValue
+        DTS:DataType="8">0</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Foreach Loop Container"
+      DTS:CreationName="STOCK:FOREACHLOOP"
+      DTS:Description="Foreach Loop Container"
+      DTS:DTSID="{7EB228BD-2781-4C07-93A2-B458162915F2}"
+      DTS:ExecutableType="STOCK:FOREACHLOOP"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Foreach Loop Container">
+      <DTS:ForEachEnumerator
+        DTS:CreationName="Microsoft.ForEachFileEnumerator"
+        DTS:DTSID="{E35BC028-C025-4D97-8092-6C8D69C3B4C7}"
+        DTS:ObjectName="{E35BC028-C025-4D97-8092-6C8D69C3B4C7}">
+        <DTS:PropertyExpression
+          DTS:Name="Directory">@[$Project::ParamDiretorySource]</DTS:PropertyExpression>
+        <DTS:ObjectData>
+          <ForEachFileEnumeratorProperties>
+            <FEFEProperty
+              Folder="C:\Users\mateus.lopes\Documents\visual studio 2013\Projects\3.3. ETL\SlnSSIS-Fazendo-BI-do-Zero\ArquivosFonte\" />
+            <FEFEProperty
+              FileSpec="*.txt" />
+            <FEFEProperty
+              FileNameRetrievalType="0" />
+            <FEFEProperty
+              Recurse="0" />
+          </ForEachFileEnumeratorProperties>
+        </DTS:ObjectData>
+      </DTS:ForEachEnumerator>
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Foreach Loop Container\Carregar STAGE_2"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{F244EAAC-F8AA-4F21-B7C8-98BB3AC58AB9}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Carregar STAGE_2"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados"
+                  componentClassID="Microsoft.DataConvert"
+                  contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Data Conversion"
+                  name="Conversão de Dados"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Inputs[Data Conversion Input]"
+                      name="Data Conversion Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Inputs[Data Conversion Input].Columns[Column 0]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Column 0"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 0]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Inputs[Data Conversion Input].Columns[Column 1]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Column 1"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 1]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Inputs[Data Conversion Input].Columns[Column 2]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Column 2"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 2]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Inputs[Data Conversion Input].Columns[Column 3]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Column 3"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 3]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Inputs[Data Conversion Input].Columns[Column 4]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Column 4"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 4]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Inputs[Data Conversion Input].Columns[Column 5]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Column 5"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 5]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Inputs[Data Conversion Input].Columns[Column 8]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Column 8"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 8]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Inputs[Data Conversion Input].Columns[Column 13]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Column 13"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 13]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Inputs[Data Conversion Input].Columns[Column 14]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Column 14"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 14]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Inputs[Data Conversion Input].Columns[Column 15]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Column 15"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 15]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Inputs[Data Conversion Input].Columns[Column 19]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Column 19"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 19]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Inputs[Data Conversion Input].Columns[Column 21]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Column 21"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 21]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Inputs[Data Conversion Input].Columns[Column 23]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Column 23"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 23]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Inputs[Data Conversion Input].Columns[Column 24]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Column 24"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 24]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Inputs[Data Conversion Input].Columns[Column 26]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Column 26"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 26]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Inputs[Data Conversion Input].Columns[Column 27]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Column 27"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 27]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Inputs[Data Conversion Input].Columns[Column 28]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Column 28"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 28]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Inputs[Data Conversion Input].Columns[Column 29]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Column 29"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 29]" />
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Outputs[Data Conversion Output]"
+                      exclusionGroup="1"
+                      name="Data Conversion Output"
+                      synchronousInputId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Inputs[Data Conversion Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Outputs[Data Conversion Output].Columns[DATA_GERACAO]"
+                          dataType="dbDate"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Outputs[Data Conversion Output].Columns[DATA_GERACAO]"
+                          name="DATA_GERACAO"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 0]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Outputs[Data Conversion Output].Columns[HORA_GERACAO]"
+                          dataType="dbTime2"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Outputs[Data Conversion Output].Columns[HORA_GERACAO]"
+                          name="HORA_GERACAO"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 1]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Outputs[Data Conversion Output].Columns[ANO_ELEICAO]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Outputs[Data Conversion Output].Columns[ANO_ELEICAO]"
+                          name="ANO_ELEICAO"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 2]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Outputs[Data Conversion Output].Columns[NUM_TURNO]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Outputs[Data Conversion Output].Columns[NUM_TURNO]"
+                          name="NUM_TURNO"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 3]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Outputs[Data Conversion Output].Columns[DESCRICAO_ELEICAO]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Outputs[Data Conversion Output].Columns[DESCRICAO_ELEICAO]"
+                          name="DESCRICAO_ELEICAO"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 4]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Outputs[Data Conversion Output].Columns[SIGLA_UF]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Outputs[Data Conversion Output].Columns[SIGLA_UF]"
+                          name="SIGLA_UF"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 5]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Outputs[Data Conversion Output].Columns[NOME_MUNICIPIO]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Outputs[Data Conversion Output].Columns[NOME_MUNICIPIO]"
+                          name="NOME_MUNICIPIO"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 8]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Outputs[Data Conversion Output].Columns[NOME_CANDIDATO]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Outputs[Data Conversion Output].Columns[NOME_CANDIDATO]"
+                          name="NOME_CANDIDATO"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 13]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Outputs[Data Conversion Output].Columns[NOME_URNA_CANDIDATO]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Outputs[Data Conversion Output].Columns[NOME_URNA_CANDIDATO]"
+                          name="NOME_URNA_CANDIDATO"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 14]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Outputs[Data Conversion Output].Columns[DESCRICAO_CARGO]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Outputs[Data Conversion Output].Columns[DESCRICAO_CARGO]"
+                          name="DESCRICAO_CARGO"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 15]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Outputs[Data Conversion Output].Columns[DESC_SIT_CANDIDATO]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Outputs[Data Conversion Output].Columns[DESC_SIT_CANDIDATO]"
+                          name="DESC_SIT_CANDIDATO"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 19]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Outputs[Data Conversion Output].Columns[DESC_SIT_CAND_TOT]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Outputs[Data Conversion Output].Columns[DESC_SIT_CAND_TOT]"
+                          name="DESC_SIT_CAND_TOT"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 21]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Outputs[Data Conversion Output].Columns[SIGLA_PARTIDO]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Outputs[Data Conversion Output].Columns[SIGLA_PARTIDO]"
+                          name="SIGLA_PARTIDO"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 23]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Outputs[Data Conversion Output].Columns[NOME_PARTIDO]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Outputs[Data Conversion Output].Columns[NOME_PARTIDO]"
+                          name="NOME_PARTIDO"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 24]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Outputs[Data Conversion Output].Columns[NOME_COLIGACAO]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Outputs[Data Conversion Output].Columns[NOME_COLIGACAO]"
+                          name="NOME_COLIGACAO"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 26]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Outputs[Data Conversion Output].Columns[COMPOSICAO_LEGENDA]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Outputs[Data Conversion Output].Columns[COMPOSICAO_LEGENDA]"
+                          name="COMPOSICAO_LEGENDA"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 27]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Outputs[Data Conversion Output].Columns[TOTAL_VOTOS]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Outputs[Data Conversion Output].Columns[TOTAL_VOTOS]"
+                          name="TOTAL_VOTOS"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 28]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Outputs[Data Conversion Output].Columns[TRANSITO]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Outputs[Data Conversion Output].Columns[TRANSITO]"
+                          name="TRANSITO"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 29]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Outputs[Data Conversion Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Data Conversion Error Output"
+                      synchronousInputId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Inputs[Data Conversion Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Foreach Loop Container\Carregar STAGE_2\Inserir dados STAGE_2"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="Inserir dados STAGE_2"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[dbo].[VOTACAO_CANDIDATO_MUN_ZONA]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">3</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Foreach Loop Container\Carregar STAGE_2\Inserir dados STAGE_2.Connections[OleDbConnection]"
+                      connectionManagerID="{6BF0B924-80AA-4DA1-8CFE-8683B32A8A0B}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[DB_Conn_DM_STAGE_2]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Foreach Loop Container\Carregar STAGE_2\Inserir dados STAGE_2.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Inserir dados STAGE_2.Inputs[OLE DB Destination Input].Columns[DATA_GERACAO]"
+                          cachedDataType="dbDate"
+                          cachedName="DATA_GERACAO"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Carregar STAGE_2\Inserir dados STAGE_2.Inputs[OLE DB Destination Input].ExternalColumns[DATA_GERACAO]"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Outputs[Data Conversion Output].Columns[DATA_GERACAO]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Inserir dados STAGE_2.Inputs[OLE DB Destination Input].Columns[HORA_GERACAO]"
+                          cachedDataType="dbTime2"
+                          cachedName="HORA_GERACAO"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Carregar STAGE_2\Inserir dados STAGE_2.Inputs[OLE DB Destination Input].ExternalColumns[HORA_GERACAO]"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Outputs[Data Conversion Output].Columns[HORA_GERACAO]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Inserir dados STAGE_2.Inputs[OLE DB Destination Input].Columns[ANO_ELEICAO]"
+                          cachedDataType="i4"
+                          cachedName="ANO_ELEICAO"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Carregar STAGE_2\Inserir dados STAGE_2.Inputs[OLE DB Destination Input].ExternalColumns[ANO_ELEICAO]"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Outputs[Data Conversion Output].Columns[ANO_ELEICAO]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Inserir dados STAGE_2.Inputs[OLE DB Destination Input].Columns[NUM_TURNO]"
+                          cachedDataType="i4"
+                          cachedName="NUM_TURNO"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Carregar STAGE_2\Inserir dados STAGE_2.Inputs[OLE DB Destination Input].ExternalColumns[NUM_TURNO]"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Outputs[Data Conversion Output].Columns[NUM_TURNO]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Inserir dados STAGE_2.Inputs[OLE DB Destination Input].Columns[DESCRICAO_ELEICAO]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="DESCRICAO_ELEICAO"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Carregar STAGE_2\Inserir dados STAGE_2.Inputs[OLE DB Destination Input].ExternalColumns[DESCRICAO_ELEICAO]"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Outputs[Data Conversion Output].Columns[DESCRICAO_ELEICAO]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Inserir dados STAGE_2.Inputs[OLE DB Destination Input].Columns[SIGLA_UF]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="SIGLA_UF"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Carregar STAGE_2\Inserir dados STAGE_2.Inputs[OLE DB Destination Input].ExternalColumns[SIGLA_UF]"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Outputs[Data Conversion Output].Columns[SIGLA_UF]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Inserir dados STAGE_2.Inputs[OLE DB Destination Input].Columns[NOME_MUNICIPIO]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="NOME_MUNICIPIO"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Carregar STAGE_2\Inserir dados STAGE_2.Inputs[OLE DB Destination Input].ExternalColumns[NOME_MUNICIPIO]"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Outputs[Data Conversion Output].Columns[NOME_MUNICIPIO]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Inserir dados STAGE_2.Inputs[OLE DB Destination Input].Columns[NOME_CANDIDATO]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="NOME_CANDIDATO"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Carregar STAGE_2\Inserir dados STAGE_2.Inputs[OLE DB Destination Input].ExternalColumns[NOME_CANDIDATO]"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Outputs[Data Conversion Output].Columns[NOME_CANDIDATO]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Inserir dados STAGE_2.Inputs[OLE DB Destination Input].Columns[NOME_URNA_CANDIDATO]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="NOME_URNA_CANDIDATO"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Carregar STAGE_2\Inserir dados STAGE_2.Inputs[OLE DB Destination Input].ExternalColumns[NOME_URNA_CANDIDATO]"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Outputs[Data Conversion Output].Columns[NOME_URNA_CANDIDATO]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Inserir dados STAGE_2.Inputs[OLE DB Destination Input].Columns[DESCRICAO_CARGO]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="DESCRICAO_CARGO"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Carregar STAGE_2\Inserir dados STAGE_2.Inputs[OLE DB Destination Input].ExternalColumns[DESCRICAO_CARGO]"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Outputs[Data Conversion Output].Columns[DESCRICAO_CARGO]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Inserir dados STAGE_2.Inputs[OLE DB Destination Input].Columns[DESC_SIT_CANDIDATO]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="DESC_SIT_CANDIDATO"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Carregar STAGE_2\Inserir dados STAGE_2.Inputs[OLE DB Destination Input].ExternalColumns[DESC_SIT_CANDIDATO]"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Outputs[Data Conversion Output].Columns[DESC_SIT_CANDIDATO]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Inserir dados STAGE_2.Inputs[OLE DB Destination Input].Columns[DESC_SIT_CAND_TOT]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="DESC_SIT_CAND_TOT"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Carregar STAGE_2\Inserir dados STAGE_2.Inputs[OLE DB Destination Input].ExternalColumns[DESC_SIT_CAND_TOT]"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Outputs[Data Conversion Output].Columns[DESC_SIT_CAND_TOT]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Inserir dados STAGE_2.Inputs[OLE DB Destination Input].Columns[SIGLA_PARTIDO]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="SIGLA_PARTIDO"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Carregar STAGE_2\Inserir dados STAGE_2.Inputs[OLE DB Destination Input].ExternalColumns[SIGLA_PARTIDO]"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Outputs[Data Conversion Output].Columns[SIGLA_PARTIDO]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Inserir dados STAGE_2.Inputs[OLE DB Destination Input].Columns[NOME_PARTIDO]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="NOME_PARTIDO"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Carregar STAGE_2\Inserir dados STAGE_2.Inputs[OLE DB Destination Input].ExternalColumns[NOME_PARTIDO]"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Outputs[Data Conversion Output].Columns[NOME_PARTIDO]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Inserir dados STAGE_2.Inputs[OLE DB Destination Input].Columns[NOME_COLIGACAO]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="NOME_COLIGACAO"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Carregar STAGE_2\Inserir dados STAGE_2.Inputs[OLE DB Destination Input].ExternalColumns[NOME_COLIGACAO]"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Outputs[Data Conversion Output].Columns[NOME_COLIGACAO]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Inserir dados STAGE_2.Inputs[OLE DB Destination Input].Columns[COMPOSICAO_LEGENDA]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="COMPOSICAO_LEGENDA"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Carregar STAGE_2\Inserir dados STAGE_2.Inputs[OLE DB Destination Input].ExternalColumns[COMPOSICAO_LEGENDA]"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Outputs[Data Conversion Output].Columns[COMPOSICAO_LEGENDA]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Inserir dados STAGE_2.Inputs[OLE DB Destination Input].Columns[TOTAL_VOTOS]"
+                          cachedDataType="i4"
+                          cachedName="TOTAL_VOTOS"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Carregar STAGE_2\Inserir dados STAGE_2.Inputs[OLE DB Destination Input].ExternalColumns[TOTAL_VOTOS]"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Outputs[Data Conversion Output].Columns[TOTAL_VOTOS]" />
+                        <inputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Inserir dados STAGE_2.Inputs[OLE DB Destination Input].Columns[TRANSITO]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="TRANSITO"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Carregar STAGE_2\Inserir dados STAGE_2.Inputs[OLE DB Destination Input].ExternalColumns[TRANSITO]"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Outputs[Data Conversion Output].Columns[TRANSITO]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Inserir dados STAGE_2.Inputs[OLE DB Destination Input].ExternalColumns[ID]"
+                          dataType="i4"
+                          name="ID" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Inserir dados STAGE_2.Inputs[OLE DB Destination Input].ExternalColumns[DATA_GERACAO]"
+                          dataType="dbDate"
+                          name="DATA_GERACAO" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Inserir dados STAGE_2.Inputs[OLE DB Destination Input].ExternalColumns[HORA_GERACAO]"
+                          dataType="dbTime2"
+                          name="HORA_GERACAO"
+                          scale="7" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Inserir dados STAGE_2.Inputs[OLE DB Destination Input].ExternalColumns[ANO_ELEICAO]"
+                          dataType="i4"
+                          name="ANO_ELEICAO" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Inserir dados STAGE_2.Inputs[OLE DB Destination Input].ExternalColumns[NUM_TURNO]"
+                          dataType="i4"
+                          name="NUM_TURNO" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Inserir dados STAGE_2.Inputs[OLE DB Destination Input].ExternalColumns[DESCRICAO_ELEICAO]"
+                          dataType="nText"
+                          name="DESCRICAO_ELEICAO" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Inserir dados STAGE_2.Inputs[OLE DB Destination Input].ExternalColumns[SIGLA_UF]"
+                          dataType="nText"
+                          name="SIGLA_UF" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Inserir dados STAGE_2.Inputs[OLE DB Destination Input].ExternalColumns[NOME_MUNICIPIO]"
+                          dataType="nText"
+                          name="NOME_MUNICIPIO" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Inserir dados STAGE_2.Inputs[OLE DB Destination Input].ExternalColumns[NOME_CANDIDATO]"
+                          dataType="nText"
+                          name="NOME_CANDIDATO" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Inserir dados STAGE_2.Inputs[OLE DB Destination Input].ExternalColumns[NOME_URNA_CANDIDATO]"
+                          dataType="nText"
+                          name="NOME_URNA_CANDIDATO" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Inserir dados STAGE_2.Inputs[OLE DB Destination Input].ExternalColumns[DESCRICAO_CARGO]"
+                          dataType="nText"
+                          name="DESCRICAO_CARGO" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Inserir dados STAGE_2.Inputs[OLE DB Destination Input].ExternalColumns[DESC_SIT_CANDIDATO]"
+                          dataType="nText"
+                          name="DESC_SIT_CANDIDATO" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Inserir dados STAGE_2.Inputs[OLE DB Destination Input].ExternalColumns[DESC_SIT_CAND_TOT]"
+                          dataType="nText"
+                          name="DESC_SIT_CAND_TOT" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Inserir dados STAGE_2.Inputs[OLE DB Destination Input].ExternalColumns[SIGLA_PARTIDO]"
+                          dataType="nText"
+                          name="SIGLA_PARTIDO" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Inserir dados STAGE_2.Inputs[OLE DB Destination Input].ExternalColumns[NOME_PARTIDO]"
+                          dataType="nText"
+                          name="NOME_PARTIDO" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Inserir dados STAGE_2.Inputs[OLE DB Destination Input].ExternalColumns[NOME_COLIGACAO]"
+                          dataType="nText"
+                          name="NOME_COLIGACAO" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Inserir dados STAGE_2.Inputs[OLE DB Destination Input].ExternalColumns[COMPOSICAO_LEGENDA]"
+                          dataType="nText"
+                          name="COMPOSICAO_LEGENDA" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Inserir dados STAGE_2.Inputs[OLE DB Destination Input].ExternalColumns[TOTAL_VOTOS]"
+                          dataType="i4"
+                          name="TOTAL_VOTOS" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Inserir dados STAGE_2.Inputs[OLE DB Destination Input].ExternalColumns[TRANSITO]"
+                          dataType="nText"
+                          name="TRANSITO" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\Carregar STAGE_2\Inserir dados STAGE_2.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\Foreach Loop Container\Carregar STAGE_2\Inserir dados STAGE_2.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Inserir dados STAGE_2.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Inserir dados STAGE_2.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Inserir dados STAGE_2.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Inserir dados STAGE_2.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT"
+                  componentClassID="Microsoft.FlatFileSource"
+                  contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Flat File Source"
+                  localeId="1033"
+                  name="Leitura dos Arquivos Fontes TXT"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether zero-length columns are treated as null."
+                      name="RetainNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                      name="FileNameColumnName"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[TXT_Source_Votacao_Candidatos]"
+                      connectionManagerRefId="Package.ConnectionManagers[TXT_Source_Votacao_Candidatos]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output]"
+                      name="Flat File Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 0]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 0]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 0]"
+                          name="Column 0"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 1]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 1]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 1]"
+                          name="Column 1"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 2]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 2]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 2]"
+                          name="Column 2"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 3]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 3]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 3]"
+                          name="Column 3"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 4]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 4]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 4]"
+                          name="Column 4"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 5]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 5]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 5]"
+                          name="Column 5"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 6]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 6]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 6]"
+                          name="Column 6"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 7]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 7]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 7]"
+                          name="Column 7"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 8]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 8]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 8]"
+                          name="Column 8"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 9]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 9]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 9]"
+                          name="Column 9"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 10]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 10]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 10]"
+                          name="Column 10"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 11]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 11]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 11]"
+                          name="Column 11"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 12]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 12]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 12]"
+                          name="Column 12"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 13]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 13]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 13]"
+                          name="Column 13"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 14]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 14]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 14]"
+                          name="Column 14"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 15]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 15]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 15]"
+                          name="Column 15"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 16]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 16]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 16]"
+                          name="Column 16"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 17]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 17]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 17]"
+                          name="Column 17"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 18]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 18]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 18]"
+                          name="Column 18"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 19]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 19]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 19]"
+                          name="Column 19"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 20]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 20]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 20]"
+                          name="Column 20"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 21]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 21]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 21]"
+                          name="Column 21"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 22]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 22]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 22]"
+                          name="Column 22"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 23]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 23]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 23]"
+                          name="Column 23"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 24]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 24]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 24]"
+                          name="Column 24"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 25]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 25]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 25]"
+                          name="Column 25"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 26]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 26]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 26]"
+                          name="Column 26"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 27]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 27]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 27]"
+                          name="Column 27"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 28]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 28]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 28]"
+                          name="Column 28"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 29]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 29]"
+                          length="50"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 29]"
+                          name="Column 29"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 0]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 0" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 1]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 1" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 2]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 2" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 3]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 3" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 4]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 4" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 5]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 5" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 6]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 6" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 7]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 7" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 8]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 8" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 9]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 9" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 10]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 10" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 11]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 11" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 12]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 12" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 13]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 13" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 14]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 14" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 15]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 15" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 16]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 16" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 17]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 17" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 18]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 18" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 19]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 19" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 20]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 20" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 21]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 21" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 22]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 22" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 23]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 23" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 24]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 24" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 25]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 25" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 26]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 26" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 27]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 27" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 28]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 28" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 29]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 29" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Error Output]"
+                      isErrorOut="true"
+                      name="Flat File Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          codePage="1252"
+                          dataType="text"
+                          description="Flat File Source Error Output Column"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          name="Flat File Source Error Output Column" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\Foreach Loop Container\Carregar STAGE_2.Paths[Data Conversion Output]"
+                  endId="Package\Foreach Loop Container\Carregar STAGE_2\Inserir dados STAGE_2.Inputs[OLE DB Destination Input]"
+                  name="Data Conversion Output"
+                  startId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Outputs[Data Conversion Output]" />
+                <path
+                  refId="Package\Foreach Loop Container\Carregar STAGE_2.Paths[Flat File Source Output]"
+                  endId="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados.Inputs[Data Conversion Input]"
+                  name="Flat File Source Output"
+                  startId="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:ForEachVariableMappings>
+        <DTS:ForEachVariableMapping
+          DTS:CreationName=""
+          DTS:DTSID="{3C377D74-CE6C-4C52-943C-A5414ED79FDD}"
+          DTS:ObjectName="{3C377D74-CE6C-4C52-943C-A5414ED79FDD}"
+          DTS:ValueIndex="0"
+          DTS:VariableName="User::CurrentPath" />
+      </DTS:ForEachVariableMappings>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="sql12">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="166,42"
+          Id="Package\Foreach Loop Container\Carregar STAGE_2"
+          TopLeft="116,35" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="471,204"
+          Size="471,247"
+          Id="Package\Foreach Loop Container"
+          TopLeft="227,110" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Foreach Loop Container\Carregar STAGE_2">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="231,42"
+          Id="Package\Foreach Loop Container\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT"
+          TopLeft="332.166666666667,95" />
+        <NodeLayout
+          Size="176,42"
+          Id="Package\Foreach Loop Container\Carregar STAGE_2\Conversão de Dados"
+          TopLeft="359.666666666667,179" />
+        <NodeLayout
+          Size="187,42"
+          Id="Package\Foreach Loop Container\Carregar STAGE_2\Inserir dados STAGE_2"
+          TopLeft="352.166666666667,262" />
+        <EdgeLayout
+          Id="Package\Foreach Loop Container\Carregar STAGE_2.Paths[Flat File Source Output]"
+          TopLeft="447.666666666667,137">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,42"
+              Start="0,0"
+              End="0,34.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Foreach Loop Container\Carregar STAGE_2.Paths[Data Conversion Output]"
+          TopLeft="446.666666666667,221">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,41"
+              Start="0,0"
+              End="0,33.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Foreach Loop Container\Carregar STAGE_2\Inserir dados STAGE_2">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
