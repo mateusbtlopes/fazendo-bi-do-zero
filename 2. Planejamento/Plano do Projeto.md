@@ -54,13 +54,29 @@
 * Apresentação do trabalho
 
 #### Fora do Escopo ####
-<p>Disponibilização de licenças dos softwares utilizados neste trabalho</p>
+<p>Disponibilização de licenças dos softwares utilizados neste trabalho.</p>
 
 ### Premissas ###
-<p>Acesso aos dados disponibilizados no site do TRE</p>
+<p>Acesso aos dados disponibilizados no site do TRE.</p>
 
 ### Riscos ###
-<p>Dificuldade/Restrição de acesso aos dados disponibilizados no site do TRE</p>
+<p>Dificuldade/Restrição de acesso aos dados disponibilizados no site do TRE.</p>
 
 ### Restrições ###
-<p>Restrição de acesso a qualquer tipo de ferramenta necessária para desenvolvimento deste trabalho</p>
+<p>Restrição de acesso a qualquer tipo de ferramenta necessária para desenvolvimento deste trabalho.</p>
+
+### Organograma do Projeto ###
+
+Acesse o [Organograma do Projeto](https://github.com/mateusblopes/fazendo-bi-do-zero/blob/master/2.%20Planejamento/Organograma.md).
+
+### Plano de Riscos ###
+
+Acesse o [Plano de Riscos](https://github.com/mateusblopes/fazendo-bi-do-zero/blob/master/2.%20Planejamento/Plano%20de%20Riscos.md).
+
+### Plano de Comunicação ###
+
+Acesse o [Plano de Comunicação](https://github.com/mateusblopes/fazendo-bi-do-zero/blob/master/2.%20Planejamento/Plano%20de%20Comunicacao.md).
+
+### Plano de Custos ###
+
+Acesse o [Plano de Custos](https://github.com/mateusblopes/fazendo-bi-do-zero/blob/master/2.%20Planejamento/Plano%20de%20Custos.md).
