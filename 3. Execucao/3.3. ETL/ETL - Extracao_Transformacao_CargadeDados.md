@@ -1,6 +1,6 @@
 # ETL - Extração, Transformação e Carga de Dados #
 
-<p> Como já sabemos os dados utilizados neste projeto vem do [Repositório de Dados Eleitorais - TSE - Tribunal Superior Eleitoral](http://www.tse.jus.br/hotSites/pesquisas-eleitorais/index.html) em formato ".txt", com a intensão de fornecer maior confiabilidade no armanezamento destes dados, criamos alguns STAGE's que foram povoadas utilizando o processo que damos o nome de ETL (Extração, Transformação e Carga de Dados), para executar tais tarefas que serão detalhadas abaixo, utilizamos a ferramenta da Microsoft denominada <strong>SSIS - SQL Server Integration Server</strong>.</p>
+Como já sabemos os dados utilizados neste projeto vem do [Repositório de Dados Eleitorais - TSE - Tribunal Superior Eleitoral](http://www.tse.jus.br/hotSites/pesquisas-eleitorais/index.html) em formato ".txt", com a intensão de fornecer maior confiabilidade no armanezamento destes dados, criamos alguns STAGE's que foram povoadas utilizando o processo que damos o nome de ETL (Extração, Transformação e Carga de Dados), para executar tais tarefas que serão detalhadas abaixo, utilizamos a ferramenta da Microsoft denominada <strong>SSIS - SQL Server Integration Server</strong>.
 
 ![SSIS - Exemplo de Solução SSIS](./img/SSIS_ExemploDeSolution.png)
 
