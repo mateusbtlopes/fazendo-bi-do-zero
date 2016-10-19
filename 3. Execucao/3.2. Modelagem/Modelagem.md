@@ -8,7 +8,7 @@
 
 <p><strong>Representação Física do Banco:</strong></p>
 
-![diagrama_fisico_stage_1](./3.2.%20Modelagem/img/diagrama_fisico_stage_1.png)
+![diagrama_fisico_stage_1](./img/diagrama_fisico_stage_1.png)
 
 <p> Faça aqui <strong>[Download](https://github.com/mateusblopes/fazendo-bi-do-zero/tree/master/3.%20Execucao/3.2.%20Modelagem/scripts/Criando%20DM_STAGE_1.sql)</strong> do script de criação da tabela "VOTACAO_CANDIDATO_MUN_ZONA" do "DM_STAGE_1"</p>
 
@@ -18,6 +18,6 @@
 
 <p><strong>Representação Física do Banco:</strong></p>
 
-![diagrama_fisico_stage_1](./3.2.%20Modelagem/img/diagrama_fisico_stage_2.png)
+![diagrama_fisico_stage_1](./img/diagrama_fisico_stage_2.png)
 
 <p> Faça aqui [Download](https://github.com/mateusblopes/fazendo-bi-do-zero/tree/master/3.%20Execucao/3.2.%20Modelagem/scripts/Criando%20DM_STAGE_2.sql) do script de criação da tabela "VOTACAO_CANDIDATO_MUN_ZONA" do "DM_STAGE_2"</p>
