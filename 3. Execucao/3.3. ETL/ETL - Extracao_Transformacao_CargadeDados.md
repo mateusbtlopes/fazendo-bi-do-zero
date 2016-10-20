@@ -21,3 +21,7 @@ Como já sabemos os dados utilizados neste projeto vem do [Repositório de Dados
 <p> Tendo sido completada as tarefas de Extração e Transformação, a carga dos dados foi simples, sendo necessário apenas um mapeamento de qual coluna do arquivo iria para qual coluna da tabela e pronto, nosso ETL está finalizado.</p>
 
 ![SSIS - Exemplo Carga De Dados](./img/SSIS_ExemploDeCargaDeDados.png)
+
+<p> Após a criação de todo processo ETL devemos então executar o pacote que após ser executado temos todos os dados retirados dos arquivos ".txt" e inseridos no banco de dados STAGE, conforme mostra a imagem abaixo:</p>
+
+![SSIS - Exemplo Carga De Dados](./img/SSIS_CargaDeDadosCompleta.PNG)
