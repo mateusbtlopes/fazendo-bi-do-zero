@@ -8,7 +8,7 @@ Criado com apenas uma tabela denominada "VOTACAO_CANDIDATO_MUN_ZONA", este banco
 
 <p><strong>Representação Física do Banco:</strong></p>
 
-![diagrama_fisico_stage_1](./img/diagrama_fisico_stage_1.png)
+![diagrama_fisico_stage_1](./imagens/diagrama_fisico_stage_1.png)
 
 Faça aqui <strong>[Download](https://github.com/mateusblopes/fazendo-bi-do-zero/tree/master/3.%20Execucao/3.2.%20Modelagem/scripts/Criando%20DM_STAGE_1.sql)</strong> do script de criação da tabela "VOTACAO_CANDIDATO_MUN_ZONA" do "DM_STAGE_1"
 
@@ -18,6 +18,6 @@ Criado com apenas uma tabela resumida denominada "VOTACAO_CANDIDATO_MUN_ZONA", e
 
 <p><strong>Representação Física do Banco:</strong></p>
 
-![diagrama_fisico_stage_1](./img/diagrama_fisico_stage_2.png)
+![diagrama_fisico_stage_1](./imagens/diagrama_fisico_stage_2.png)
 
 Faça aqui [Download](https://github.com/mateusblopes/fazendo-bi-do-zero/tree/master/3.%20Execucao/3.2.%20Modelagem/scripts/Criando%20DM_STAGE_2.sql) do script de criação da tabela "VOTACAO_CANDIDATO_MUN_ZONA" do "DM_STAGE_2"
