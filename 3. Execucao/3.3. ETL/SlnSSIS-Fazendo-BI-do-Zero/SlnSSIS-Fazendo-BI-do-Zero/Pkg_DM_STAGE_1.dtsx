@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Pkg_DM_STAGE_1"
   DTS:PackageType="5"
-  DTS:VersionBuild="37"
-  DTS:VersionGUID="{9AF74470-625A-497E-BC82-3FE3BDA088E7}">
+  DTS:VersionBuild="38"
+  DTS:VersionGUID="{35C636FB-015E-4BB5-9A83-473B412D6499}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1548,23 +1548,28 @@
                           name="NUM_TURNO" />
                         <externalMetadataColumn
                           refId="Package\Lê todos os arquivos da pasta de origem\Carregar STAGE_1\Inserir dados STAGE_1.Inputs[OLE DB Destination Input].ExternalColumns[DESCRICAO_ELEICAO]"
-                          dataType="nText"
+                          dataType="wstr"
+                          length="100"
                           name="DESCRICAO_ELEICAO" />
                         <externalMetadataColumn
                           refId="Package\Lê todos os arquivos da pasta de origem\Carregar STAGE_1\Inserir dados STAGE_1.Inputs[OLE DB Destination Input].ExternalColumns[SIGLA_UF]"
-                          dataType="nText"
+                          dataType="wstr"
+                          length="100"
                           name="SIGLA_UF" />
                         <externalMetadataColumn
                           refId="Package\Lê todos os arquivos da pasta de origem\Carregar STAGE_1\Inserir dados STAGE_1.Inputs[OLE DB Destination Input].ExternalColumns[SIGLA_UE]"
-                          dataType="nText"
+                          dataType="wstr"
+                          length="100"
                           name="SIGLA_UE" />
                         <externalMetadataColumn
                           refId="Package\Lê todos os arquivos da pasta de origem\Carregar STAGE_1\Inserir dados STAGE_1.Inputs[OLE DB Destination Input].ExternalColumns[CODIGO_MUNICIPIO]"
-                          dataType="nText"
+                          dataType="wstr"
+                          length="100"
                           name="CODIGO_MUNICIPIO" />
                         <externalMetadataColumn
                           refId="Package\Lê todos os arquivos da pasta de origem\Carregar STAGE_1\Inserir dados STAGE_1.Inputs[OLE DB Destination Input].ExternalColumns[NOME_MUNICIPIO]"
-                          dataType="nText"
+                          dataType="wstr"
+                          length="100"
                           name="NOME_MUNICIPIO" />
                         <externalMetadataColumn
                           refId="Package\Lê todos os arquivos da pasta de origem\Carregar STAGE_1\Inserir dados STAGE_1.Inputs[OLE DB Destination Input].ExternalColumns[NUMERO_ZONA]"
@@ -1572,7 +1577,8 @@
                           name="NUMERO_ZONA" />
                         <externalMetadataColumn
                           refId="Package\Lê todos os arquivos da pasta de origem\Carregar STAGE_1\Inserir dados STAGE_1.Inputs[OLE DB Destination Input].ExternalColumns[CODIGO_CARGO]"
-                          dataType="nText"
+                          dataType="wstr"
+                          length="100"
                           name="CODIGO_CARGO" />
                         <externalMetadataColumn
                           refId="Package\Lê todos os arquivos da pasta de origem\Carregar STAGE_1\Inserir dados STAGE_1.Inputs[OLE DB Destination Input].ExternalColumns[NUMERO_CAND]"
@@ -1580,43 +1586,53 @@
                           name="NUMERO_CAND" />
                         <externalMetadataColumn
                           refId="Package\Lê todos os arquivos da pasta de origem\Carregar STAGE_1\Inserir dados STAGE_1.Inputs[OLE DB Destination Input].ExternalColumns[SQ_CANDIDATO]"
-                          dataType="nText"
+                          dataType="wstr"
+                          length="100"
                           name="SQ_CANDIDATO" />
                         <externalMetadataColumn
                           refId="Package\Lê todos os arquivos da pasta de origem\Carregar STAGE_1\Inserir dados STAGE_1.Inputs[OLE DB Destination Input].ExternalColumns[NOME_CANDIDATO]"
-                          dataType="nText"
+                          dataType="wstr"
+                          length="100"
                           name="NOME_CANDIDATO" />
                         <externalMetadataColumn
                           refId="Package\Lê todos os arquivos da pasta de origem\Carregar STAGE_1\Inserir dados STAGE_1.Inputs[OLE DB Destination Input].ExternalColumns[NOME_URNA_CANDIDATO]"
-                          dataType="nText"
+                          dataType="wstr"
+                          length="100"
                           name="NOME_URNA_CANDIDATO" />
                         <externalMetadataColumn
                           refId="Package\Lê todos os arquivos da pasta de origem\Carregar STAGE_1\Inserir dados STAGE_1.Inputs[OLE DB Destination Input].ExternalColumns[DESCRICAO_CARGO]"
-                          dataType="nText"
+                          dataType="wstr"
+                          length="100"
                           name="DESCRICAO_CARGO" />
                         <externalMetadataColumn
                           refId="Package\Lê todos os arquivos da pasta de origem\Carregar STAGE_1\Inserir dados STAGE_1.Inputs[OLE DB Destination Input].ExternalColumns[COD_SIT_CAND_SUPERIOR]"
-                          dataType="nText"
+                          dataType="wstr"
+                          length="100"
                           name="COD_SIT_CAND_SUPERIOR" />
                         <externalMetadataColumn
                           refId="Package\Lê todos os arquivos da pasta de origem\Carregar STAGE_1\Inserir dados STAGE_1.Inputs[OLE DB Destination Input].ExternalColumns[DESC_SIT_CAND_SUPERIOR]"
-                          dataType="nText"
+                          dataType="wstr"
+                          length="100"
                           name="DESC_SIT_CAND_SUPERIOR" />
                         <externalMetadataColumn
                           refId="Package\Lê todos os arquivos da pasta de origem\Carregar STAGE_1\Inserir dados STAGE_1.Inputs[OLE DB Destination Input].ExternalColumns[CODIGO_SIT_CANDIDATO]"
-                          dataType="nText"
+                          dataType="wstr"
+                          length="100"
                           name="CODIGO_SIT_CANDIDATO" />
                         <externalMetadataColumn
                           refId="Package\Lê todos os arquivos da pasta de origem\Carregar STAGE_1\Inserir dados STAGE_1.Inputs[OLE DB Destination Input].ExternalColumns[DESC_SIT_CANDIDATO]"
-                          dataType="nText"
+                          dataType="wstr"
+                          length="100"
                           name="DESC_SIT_CANDIDATO" />
                         <externalMetadataColumn
                           refId="Package\Lê todos os arquivos da pasta de origem\Carregar STAGE_1\Inserir dados STAGE_1.Inputs[OLE DB Destination Input].ExternalColumns[CODIGO_SIT_CAND_TOT]"
-                          dataType="nText"
+                          dataType="wstr"
+                          length="100"
                           name="CODIGO_SIT_CAND_TOT" />
                         <externalMetadataColumn
                           refId="Package\Lê todos os arquivos da pasta de origem\Carregar STAGE_1\Inserir dados STAGE_1.Inputs[OLE DB Destination Input].ExternalColumns[DESC_SIT_CAND_TOT]"
-                          dataType="nText"
+                          dataType="wstr"
+                          length="100"
                           name="DESC_SIT_CAND_TOT" />
                         <externalMetadataColumn
                           refId="Package\Lê todos os arquivos da pasta de origem\Carregar STAGE_1\Inserir dados STAGE_1.Inputs[OLE DB Destination Input].ExternalColumns[NUMERO_PARTIDO]"
@@ -1624,23 +1640,28 @@
                           name="NUMERO_PARTIDO" />
                         <externalMetadataColumn
                           refId="Package\Lê todos os arquivos da pasta de origem\Carregar STAGE_1\Inserir dados STAGE_1.Inputs[OLE DB Destination Input].ExternalColumns[SIGLA_PARTIDO]"
-                          dataType="nText"
+                          dataType="wstr"
+                          length="100"
                           name="SIGLA_PARTIDO" />
                         <externalMetadataColumn
                           refId="Package\Lê todos os arquivos da pasta de origem\Carregar STAGE_1\Inserir dados STAGE_1.Inputs[OLE DB Destination Input].ExternalColumns[NOME_PARTIDO]"
-                          dataType="nText"
+                          dataType="wstr"
+                          length="100"
                           name="NOME_PARTIDO" />
                         <externalMetadataColumn
                           refId="Package\Lê todos os arquivos da pasta de origem\Carregar STAGE_1\Inserir dados STAGE_1.Inputs[OLE DB Destination Input].ExternalColumns[SEQUENCIAL_LEGENDA]"
-                          dataType="nText"
+                          dataType="wstr"
+                          length="100"
                           name="SEQUENCIAL_LEGENDA" />
                         <externalMetadataColumn
                           refId="Package\Lê todos os arquivos da pasta de origem\Carregar STAGE_1\Inserir dados STAGE_1.Inputs[OLE DB Destination Input].ExternalColumns[NOME_COLIGACAO]"
-                          dataType="nText"
+                          dataType="wstr"
+                          length="100"
                           name="NOME_COLIGACAO" />
                         <externalMetadataColumn
                           refId="Package\Lê todos os arquivos da pasta de origem\Carregar STAGE_1\Inserir dados STAGE_1.Inputs[OLE DB Destination Input].ExternalColumns[COMPOSICAO_LEGENDA]"
-                          dataType="nText"
+                          dataType="wstr"
+                          length="100"
                           name="COMPOSICAO_LEGENDA" />
                         <externalMetadataColumn
                           refId="Package\Lê todos os arquivos da pasta de origem\Carregar STAGE_1\Inserir dados STAGE_1.Inputs[OLE DB Destination Input].ExternalColumns[TOTAL_VOTOS]"
@@ -1648,7 +1669,8 @@
                           name="TOTAL_VOTOS" />
                         <externalMetadataColumn
                           refId="Package\Lê todos os arquivos da pasta de origem\Carregar STAGE_1\Inserir dados STAGE_1.Inputs[OLE DB Destination Input].ExternalColumns[TRANSITO]"
-                          dataType="nText"
+                          dataType="wstr"
+                          length="100"
                           name="TRANSITO" />
                       </externalMetadataColumns>
                     </input>
