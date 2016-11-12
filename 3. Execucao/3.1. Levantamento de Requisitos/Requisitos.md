@@ -19,10 +19,10 @@
 * Quantidade de candidatos a prefeito e a vereador foram lançados por região?
 * Quantidade de candidatos a prefeito e a vereador foram lançados por estado?
 * Quantidade de candidatos a prefeito e a vereador foram lançados por cidade?
-* Quantidade de candidatos a prefeito e a vereador foram eleitos lançados em todo país?
-* Quantidade de candidatos a prefeito e a vereador foram eleitos lançados por região?
-* Quantidade de candidatos a prefeito e a vereador foram eleitos lançados por estado?
-* Quantidade de candidatos a prefeito e a vereador foram eleitos lançados por cidade?
+* Quantidade de candidatos a prefeito e a vereador foram eleitos em todo país?
+* Quantidade de candidatos a prefeito e a vereador foram eleitos por região?
+* Quantidade de candidatos a prefeito e a vereador foram eleitos por estado?
+* Quantidade de candidatos a prefeito e a vereador foram eleitos por cidade?
 * Quantidade de candidatos a prefeito e a vereador foram para o 2º turno em todo país?
 * Quantidade de candidatos a prefeito e a vereador foram para o 2º turno por região?
 * Quantidade de candidatos a prefeito e a vereador foram para o 2º turno por estado?
