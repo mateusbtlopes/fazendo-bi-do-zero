@@ -1,0 +1,1627 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="9/26/2016 6:13:52 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="CPX-9T8AP5E00YJ"
+  DTS:CreatorName="DIR\mateus.lopes"
+  DTS:DTSID="{4E424392-C937-44EA-9EDD-8FD822A8B800}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="12.0.2430.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Pkg_CARREGAR_DM_ELEICOES"
+  DTS:PackageType="5"
+  DTS:VersionBuild="15"
+  DTS:VersionGUID="{2A854E42-2FA3-4270-9964-0A1D132B272C}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{A4DC6328-B8DF-4CFE-80A6-D647B2813554}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="CurrentPath">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;"
+      DTS:CreationName="STOCK:FOREACHLOOP"
+      DTS:Description="Foreach Loop Container"
+      DTS:DTSID="{E6B50FC0-291D-4256-9E77-6C120704FCCB}"
+      DTS:ExecutableType="STOCK:FOREACHLOOP"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;">
+      <DTS:ForEachEnumerator
+        DTS:CreationName="Microsoft.ForEachFileEnumerator"
+        DTS:DTSID="{E6C19FFD-DFB8-4C69-82BD-CE09BA006A86}"
+        DTS:ObjectName="{E6C19FFD-DFB8-4C69-82BD-CE09BA006A86}">
+        <DTS:PropertyExpression
+          DTS:Name="Directory">@[$Project::ParamDiretorySource]</DTS:PropertyExpression>
+        <DTS:ObjectData>
+          <ForEachFileEnumeratorProperties>
+            <FEFEProperty
+              Folder="C:\Users\mateus.lopes\Documents\visual studio 2013\Projects\3.3. ETL\SlnSSIS-Fazendo-BI-do-Zero\ArquivosFonte\" />
+            <FEFEProperty
+              FileSpec="*.txt" />
+            <FEFEProperty
+              FileNameRetrievalType="0" />
+            <FEFEProperty
+              Recurse="0" />
+          </ForEachFileEnumeratorProperties>
+        </DTS:ObjectData>
+      </DTS:ForEachEnumerator>
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{BB47DE2C-425C-49FF-972B-283A16935A8F}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Carregar STAGE_2"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Inserir dados STAGE_2"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="Inserir dados STAGE_2"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset"></property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">0</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Inserir dados STAGE_2.Connections[OleDbConnection]"
+                      connectionManagerID="{986DB605-0C1C-4952-ABA5-6F64A0D2E76A}:invalid"
+                      connectionManagerRefId="{986DB605-0C1C-4952-ABA5-6F64A0D2E76A}:invalid"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Inserir dados STAGE_2.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <externalMetadataColumns
+                        isUsed="True" />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Inserir dados STAGE_2.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Inserir dados STAGE_2.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Inserir dados STAGE_2.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Inserir dados STAGE_2.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Inserir dados STAGE_2.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Inserir dados STAGE_2.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT"
+                  componentClassID="Microsoft.FlatFileSource"
+                  contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Flat File Source"
+                  localeId="1033"
+                  name="Leitura dos Arquivos Fontes TXT"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether zero-length columns are treated as null."
+                      name="RetainNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                      name="FileNameColumnName"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Connections[FlatFileConnection]"
+                      connectionManagerID="{D41CE409-390E-43B6-BDA6-2A83916A85E1}:invalid"
+                      connectionManagerRefId="{D41CE409-390E-43B6-BDA6-2A83916A85E1}:invalid"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output]"
+                      name="Flat File Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 0]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 0]"
+                          length="50"
+                          lineageId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 0]"
+                          name="Column 0"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 1]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 1]"
+                          length="50"
+                          lineageId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 1]"
+                          name="Column 1"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 2]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 2]"
+                          length="50"
+                          lineageId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 2]"
+                          name="Column 2"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 3]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 3]"
+                          length="50"
+                          lineageId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 3]"
+                          name="Column 3"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 4]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 4]"
+                          length="50"
+                          lineageId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 4]"
+                          name="Column 4"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 5]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 5]"
+                          length="50"
+                          lineageId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 5]"
+                          name="Column 5"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 6]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 6]"
+                          length="50"
+                          lineageId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 6]"
+                          name="Column 6"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 7]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 7]"
+                          length="50"
+                          lineageId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 7]"
+                          name="Column 7"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 8]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 8]"
+                          length="50"
+                          lineageId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 8]"
+                          name="Column 8"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 9]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 9]"
+                          length="50"
+                          lineageId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 9]"
+                          name="Column 9"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 10]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 10]"
+                          length="50"
+                          lineageId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 10]"
+                          name="Column 10"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 11]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 11]"
+                          length="50"
+                          lineageId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 11]"
+                          name="Column 11"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 12]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 12]"
+                          length="50"
+                          lineageId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 12]"
+                          name="Column 12"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 13]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 13]"
+                          length="50"
+                          lineageId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 13]"
+                          name="Column 13"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 14]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 14]"
+                          length="50"
+                          lineageId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 14]"
+                          name="Column 14"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 15]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 15]"
+                          length="50"
+                          lineageId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 15]"
+                          name="Column 15"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 16]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 16]"
+                          length="50"
+                          lineageId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 16]"
+                          name="Column 16"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 17]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 17]"
+                          length="50"
+                          lineageId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 17]"
+                          name="Column 17"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 18]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 18]"
+                          length="50"
+                          lineageId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 18]"
+                          name="Column 18"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 19]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 19]"
+                          length="50"
+                          lineageId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 19]"
+                          name="Column 19"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 20]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 20]"
+                          length="50"
+                          lineageId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 20]"
+                          name="Column 20"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 21]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 21]"
+                          length="50"
+                          lineageId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 21]"
+                          name="Column 21"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 22]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 22]"
+                          length="50"
+                          lineageId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 22]"
+                          name="Column 22"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 23]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 23]"
+                          length="50"
+                          lineageId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 23]"
+                          name="Column 23"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 24]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 24]"
+                          length="50"
+                          lineageId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 24]"
+                          name="Column 24"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 25]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 25]"
+                          length="50"
+                          lineageId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 25]"
+                          name="Column 25"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 26]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 26]"
+                          length="50"
+                          lineageId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 26]"
+                          name="Column 26"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 27]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 27]"
+                          length="50"
+                          lineageId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 27]"
+                          name="Column 27"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 28]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 28]"
+                          length="50"
+                          lineageId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 28]"
+                          name="Column 28"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 29]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 29]"
+                          length="50"
+                          lineageId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 29]"
+                          name="Column 29"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 30]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 30]"
+                          length="50"
+                          lineageId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 30]"
+                          name="Column 30"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 31]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 31]"
+                          length="50"
+                          lineageId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 31]"
+                          name="Column 31"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 32]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 32]"
+                          length="50"
+                          lineageId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 32]"
+                          name="Column 32"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 33]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 33]"
+                          length="50"
+                          lineageId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 33]"
+                          name="Column 33"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 34]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 34]"
+                          length="50"
+                          lineageId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 34]"
+                          name="Column 34"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 35]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 35]"
+                          length="50"
+                          lineageId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 35]"
+                          name="Column 35"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 36]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 36]"
+                          length="50"
+                          lineageId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 36]"
+                          name="Column 36"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 37]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 37]"
+                          length="50"
+                          lineageId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 37]"
+                          name="Column 37"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 38]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 38]"
+                          length="50"
+                          lineageId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 38]"
+                          name="Column 38"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 39]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 39]"
+                          length="50"
+                          lineageId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 39]"
+                          name="Column 39"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 40]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 40]"
+                          length="50"
+                          lineageId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 40]"
+                          name="Column 40"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 41]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 41]"
+                          length="50"
+                          lineageId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 41]"
+                          name="Column 41"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 42]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 42]"
+                          length="50"
+                          lineageId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 42]"
+                          name="Column 42"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 43]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 43]"
+                          length="50"
+                          lineageId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 43]"
+                          name="Column 43"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 44]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 44]"
+                          length="50"
+                          lineageId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 44]"
+                          name="Column 44"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 45]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 45]"
+                          length="50"
+                          lineageId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].Columns[Column 45]"
+                          name="Column 45"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 0]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 0" />
+                        <externalMetadataColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 1]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 1" />
+                        <externalMetadataColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 2]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 2" />
+                        <externalMetadataColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 3]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 3" />
+                        <externalMetadataColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 4]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 4" />
+                        <externalMetadataColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 5]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 5" />
+                        <externalMetadataColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 6]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 6" />
+                        <externalMetadataColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 7]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 7" />
+                        <externalMetadataColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 8]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 8" />
+                        <externalMetadataColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 9]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 9" />
+                        <externalMetadataColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 10]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 10" />
+                        <externalMetadataColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 11]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 11" />
+                        <externalMetadataColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 12]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 12" />
+                        <externalMetadataColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 13]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 13" />
+                        <externalMetadataColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 14]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 14" />
+                        <externalMetadataColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 15]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 15" />
+                        <externalMetadataColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 16]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 16" />
+                        <externalMetadataColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 17]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 17" />
+                        <externalMetadataColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 18]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 18" />
+                        <externalMetadataColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 19]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 19" />
+                        <externalMetadataColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 20]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 20" />
+                        <externalMetadataColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 21]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 21" />
+                        <externalMetadataColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 22]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 22" />
+                        <externalMetadataColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 23]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 23" />
+                        <externalMetadataColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 24]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 24" />
+                        <externalMetadataColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 25]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 25" />
+                        <externalMetadataColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 26]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 26" />
+                        <externalMetadataColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 27]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 27" />
+                        <externalMetadataColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 28]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 28" />
+                        <externalMetadataColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 29]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 29" />
+                        <externalMetadataColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 30]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 30" />
+                        <externalMetadataColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 31]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 31" />
+                        <externalMetadataColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 32]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 32" />
+                        <externalMetadataColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 33]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 33" />
+                        <externalMetadataColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 34]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 34" />
+                        <externalMetadataColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 35]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 35" />
+                        <externalMetadataColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 36]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 36" />
+                        <externalMetadataColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 37]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 37" />
+                        <externalMetadataColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 38]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 38" />
+                        <externalMetadataColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 39]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 39" />
+                        <externalMetadataColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 40]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 40" />
+                        <externalMetadataColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 41]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 41" />
+                        <externalMetadataColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 42]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 42" />
+                        <externalMetadataColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 43]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 43" />
+                        <externalMetadataColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 44]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 44" />
+                        <externalMetadataColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output].ExternalColumns[Column 45]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Column 45" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Error Output]"
+                      isErrorOut="true"
+                      name="Flat File Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          codePage="1252"
+                          dataType="text"
+                          description="Flat File Source Error Output Column"
+                          lineageId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          name="Flat File Source Error Output Column" />
+                        <outputColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2.Paths[Flat File Source Output]"
+                  endId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Inserir dados STAGE_2.Inputs[OLE DB Destination Input]"
+                  name="Flat File Source Output"
+                  startId="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT.Outputs[Flat File Source Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:ForEachVariableMappings>
+        <DTS:ForEachVariableMapping
+          DTS:CreationName=""
+          DTS:DTSID="{F2DF4084-23A1-4A75-87FB-2BBAD36354BF}"
+          DTS:ObjectName="{F2DF4084-23A1-4A75-87FB-2BBAD36354BF}"
+          DTS:ValueIndex="0"
+          DTS:VariableName="User::CurrentPath" />
+      </DTS:ForEachVariableMappings>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="sql12">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="166,42"
+          Id="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2"
+          TopLeft="138.25,22.25" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="452,119"
+          Size="452,162"
+          Id="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;"
+          TopLeft="161,91.75" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="231,42"
+          Id="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Leitura dos Arquivos Fontes TXT"
+          TopLeft="212.875,46" />
+        <NodeLayout
+          Size="187,42"
+          Id="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Inserir dados STAGE_2"
+          TopLeft="232,181" />
+        <EdgeLayout
+          Id="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2.Paths[Flat File Source Output]"
+          TopLeft="326.9375,88">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="0,93"
+              Start="0,0"
+              End="0,85.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,85.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Leitura de cada arquivo txt dentro da pasta &quot;Sources&quot;\Carregar STAGE_2\Inserir dados STAGE_2">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
