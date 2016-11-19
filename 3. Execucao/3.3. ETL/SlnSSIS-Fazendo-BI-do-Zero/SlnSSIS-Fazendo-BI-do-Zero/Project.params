@@ -16,7 +16,7 @@
       <SSIS:Property
         SSIS:Name="Sensitive">0</SSIS:Property>
       <SSIS:Property
-        SSIS:Name="Value">C:\Users\mateus.lopes\Documents\Visual Studio 2013\projects\3.3. ETL\SlnSSIS-Fazendo-BI-do-Zero\ArquivosFonte\</SSIS:Property>
+        SSIS:Name="Value">.\ArquivosFonte\</SSIS:Property>
       <SSIS:Property
         SSIS:Name="DataType">18</SSIS:Property>
     </SSIS:Properties>

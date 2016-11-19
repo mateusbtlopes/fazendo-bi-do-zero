@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:ObjectName="DB_Conn_DM_ELEICOES"
-  DTS:DTSID="{F55F1FF3-1FE7-4D73-8FF1-B26A61D8F791}"
+  DTS:DTSID="{54320AF0-77B9-464B-871A-3B2076280FF0}"
   DTS:CreationName="OLEDB">
   <DTS:ObjectData>
     <DTS:ConnectionManager
