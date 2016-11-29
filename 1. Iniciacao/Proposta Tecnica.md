@@ -53,7 +53,7 @@
 
 ### 3.5. Homologação ###
 
-<p>Nossa proposta de ferramenta para homologação dos dados do ETL e Dashboard será a utilização do Selenium WebDriver.</p>
+<p>Nossa proposta de ferramenta para homologação dos dados do ETL e Dashboard será a utilização do SQL Server para conferir os dados entre o banco de dados e os dashboards criados.</p>
 
 ### 3.6. Controle de Versão ###
 
