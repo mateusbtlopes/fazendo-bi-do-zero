@@ -47,10 +47,7 @@
   <p><strong>Microsoft Project:</strong> Utilizado para geração e edição do cronograma do projeto;</p>
   <p><strong>Microsoft SQL Server:</strong> Utilizado para gestão dos bancos de dados;</p>
   <p><strong>Microsoft SQL Server Integration Service:</strong> Utilizado para tarefas de ETL (Extract, Transform, Load) dos dados;</p>
-  <p><strong>Microsoft PowerBI Desktop:</strong> Utilizado para criação do dashboard interativo.</p>
   <p><strong>Tableau Desktop:</strong> Utilizado para criação do dashboard interativo.</p>
-  <p><strong>Microsoft Visual Studio:</strong> Utilizado para criação dos scripts de testes para homologação dos dashboards interativos.</p>
-  <p><strong>Selenium WebDriver:</strong> Biblioteca OpenSource utilizada para execução dos scripts de testes para homologação dos dashboards interativos.</p>
   <p><strong>Plataforma Prezi:</strong> Utilizado para criação da apresentação do projeto para turma em sala de aula.</p>
 
 ## Leia o passo a passo na integra... ##
