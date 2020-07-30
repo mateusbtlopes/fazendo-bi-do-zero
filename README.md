@@ -1,6 +1,8 @@
 # Fazendo Business Intelligence do Zero #
 
-  <p>Acesse a [home page do projeto](http://mateusblopes.com.br/fazendo-bi-do-zero) e confira o passo a passo para execução do projeto.</p>
+<iframe src="https://prezi.com/embed/xqdlzlamsxyu/" id="iframe_container" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" allow="autoplay; fullscreen" height="315" width="560"></iframe>
+
+  <p>Acesse a [home page do projeto](https://github.com/mateusblopes/fazendo-bi-do-zero) e confira o passo a passo para execução do projeto.</p>
 
 ## Motivação ##
 
@@ -52,4 +54,4 @@
 
 ## Leia o passo a passo na integra... ##
 
-  <p>Acesse a home page do projeto [Fazendo BI do zero](http://mateusblopes.com.br/fazendo-bi-do-zero) e confira o passo a passo para execução do projeto.</p>
+  <p>Acesse a home page do projeto [Fazendo BI do zero](https://github.com/mateusblopes/fazendo-bi-do-zero) e confira o passo a passo para execução do projeto.</p>
