@@ -1,7 +1,5 @@
 # Fazendo Business Intelligence do Zero #
 
-<iframe src="https://prezi.com/embed/xqdlzlamsxyu/" id="iframe_container" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" allow="autoplay; fullscreen" height="315" width="560"></iframe>
-
   <p>Acesse a [home page do projeto](https://github.com/mateusblopes/fazendo-bi-do-zero) e confira o passo a passo para execução do projeto.</p>
 
 ## Motivação ##
